@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "preview": "npx serve out",
+    "deploy": "next build && npx wrangler deploy"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",

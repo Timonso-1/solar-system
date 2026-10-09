@@ -4,9 +4,16 @@ Ein begehbares 3D-Modell des Sonnensystems mit Milchstraße und Universum (Next.
 
 ```bash
 npm install
-npm run dev     # http://localhost:3000
-npm run build && npm start
+npm run dev       # Entwicklung, http://localhost:3000
+npm run build     # statischer Export nach out/
+npm run preview   # out/ lokal ansehen
 ```
+
+## Deployment
+
+Die Seite ist komplett statisch. Nach `npm run build` den Inhalt von `out/` auf einen beliebigen Webserver legen, zum Beispiel nginx, Apache, GitHub Pages oder eine Static Site in Coolify. Node.js wird auf dem Server nicht benötigt.
+
+Cloudflare Workers: `wrangler.jsonc` liefert `out/` als statische Assets aus, ohne OpenNext. Lokal reicht `npm run deploy`. In Workers Builds als Build-Befehl `npm run build` und als Deploy-Befehl `npx wrangler deploy` eintragen.
 
 ## Inhalt
 
